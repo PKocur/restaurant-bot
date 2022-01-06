@@ -13,7 +13,7 @@ stories:
   - user: |
       tomato
   - slot_was_set:
-      - meal: 'tomato'
+      - request: 'tomato'
   - slot_was_set:
     - meal_list: ['pizza, tomato']
 
