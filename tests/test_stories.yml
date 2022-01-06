@@ -1,0 +1,59 @@
+stories:
+- story:
+  steps:
+  - user: |
+      order
+    intent: order
+  - action: order_form
+  - user: |
+      pizza
+  - slot_was_set:
+      - meal: 'pizza'
+  - action: utter_ask_request
+  - user: |
+      tomato
+  - slot_was_set:
+      - meal: 'tomato'
+  - slot_was_set:
+    - meal_list: ['pizza, tomato']
+
+- story: fast happy path
+  steps:
+  - user: |
+      hello
+    intent: greet
+  - action: utter_greet
+  - user: |
+      bye
+    intent: goodbye
+  - action: utter_goodbye
+
+- story: open time path
+  steps:
+  - user: |
+      hello
+    intent: greet
+  - action: utter_greet
+  - user: |
+      is the restaurant open on monday?
+    intent: open_time
+  - action: action_open_time
+  - user: |
+      bye
+    intent: goodbye
+  - action: utter_goodbye
+
+- story: menu path
+  steps:
+  - user: |
+      hello
+    intent: greet
+  - action: utter_greet
+  - user: |
+      show me menu
+    intent: menu
+  - action: action_show_menu
+  - user: |
+      bye
+    intent: goodbye
+  - action: utter_goodbye

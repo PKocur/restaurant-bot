@@ -1,0 +1,68 @@
+version: "2.0"
+
+intents:
+  - open_time
+  - menu
+  - order
+  - order_confirm
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - day
+  - hour
+
+entities:
+- day
+- hour
+
+forms:
+  order_form:
+    required_slots:
+      meal:
+        - type: from_text
+      request:
+        - type: from_text
+
+slots:
+  meal:
+    type: text
+  request:
+    type: text
+  meal_list:
+    type: list
+    initial_value: []
+  day:
+    type: text
+  hour:
+    type: text
+
+responses:
+
+  utter_greet:
+  - text: "Hey! I'm the restaurant assistant, feel free to ask me about the menu, opening hours or placing an order."
+
+  utter_ask_meal:
+  - text: "What do you want to order?"
+
+  utter_ask_request:
+  - text: "You can include additional request to this {meal}, if you want."
+
+  utter_changes_to_order:
+  - text: "Okay, feel free to make some changes."
+
+  utter_goodbye:
+  - text: "Thanks, bye. Please visit us later!"
+
+actions:
+- action_open_time
+- action_show_menu
+- validate_order_form
+- action_reset_meal_slot
+- action_finish_meal
+- action_confirm_order
+- action_finish_order
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

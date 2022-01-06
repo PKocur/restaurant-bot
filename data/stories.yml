@@ -1,0 +1,52 @@
+version: "2.0"
+
+stories:
+
+- story: hello goodbye path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: goodbye
+  - action: utter_goodbye
+
+- story: confirm and finish order
+  steps:
+  - intent: order_confirm
+  - action: action_confirm_order
+  - intent: affirm
+  - action: action_finish_order
+
+- story: deny order
+  steps:
+  - intent: order_confirm
+  - action: action_confirm_order
+  - intent: deny
+  - action: utter_changes_to_order
+
+- story: open time path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: open_time
+  - action: action_open_time
+  - intent: goodbye
+  - action: utter_goodbye
+
+- story: day path
+  steps:
+  - intent: day
+  - action: action_open_time
+
+- story: hour path
+  steps:
+  - intent: hour
+  - action: action_open_time
+
+- story: show menu path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: menu
+  - action: action_show_menu
+  - intent: goodbye
+  - action: utter_goodbye

@@ -1,0 +1,138 @@
+version: "2.0"
+
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+
+- intent: goodbye
+  examples: |
+    - good afternoon
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - indeed
+    - ok
+    - of course
+    - that sounds good
+    - correct
+
+- intent: deny
+  examples: |
+    - no
+    - no, thanks
+    - n
+    - no way
+    - not really
+
+# some examples generated from TypoWordsGenerator.py
+- intent: open_time
+  examples: |
+    - is the restaurant open on [monday](day) at [1][hour]?
+    - I will be on [monday](day) at [1][hour]
+    - can I come to you on [monday](day) at [1][hour]?
+    - is rhe resyaurant oprn on [monday](day) at [1][hour]
+    - i woll be on [monday](day) at [1][hour]
+    - csn i cpme to ypu on [monday](day) at [1][hour]
+    - is yhe restauranr oprn on [monday](day) at [1][hour]
+    - i eill be on [monday](day) at [1][hour]
+    - xan i cone to yiu on [monday](day) at [1][hour]
+
+# some examples generated from TypoWordsGenerator.py
+- intent: menu
+  examples: |
+    - can I have the menu?
+    - what kind of meals do you offer?
+    - show me the menu
+    - csn i hsve tge mebu?
+    - whay lind of meald do yiu offwr?
+    - shiw me thw nenu
+    - xan i habe thr nenu?
+    - whst lind of mrals do ypu offwr?
+    - sgow me yhe nenu
+
+# some examples generated from TypoWordsGenerator.py
+- intent: order
+  examples: |
+    - can I order something?
+    - I want to order
+    - I want to eat
+    - I want next order
+    - I want next meal
+    - van i otder sonething
+    - i wamt to ordwr
+    - i wamt to rat
+    - i wanr nwxt meak
+    - i wany nezt preder
+    - xan i irder sometjing
+    - i wabt to oeder
+    - i wany to wat
+    - i wamt bext mwal
+    - i wany nwxt oeder
+
+- intent: order_confirm
+  examples: |
+    - I want to confirm the order
+    - confirm order
+    - I want to pay
+
+- intent: day
+  examples: |
+    - [monday](day)
+    - [tuesday](day)
+    - [wednesday](day)
+    - [thursday](day)
+    - [friday](day)
+    - [saturday](day)
+    - [sunday](day)
+
+- intent: hour
+  examples: |
+    - [1](hour)
+    - [2](hour)
+    - [3](hour)
+    - [4](hour)
+    - [5](hour)
+    - [6](hour)
+    - [7](hour)
+    - [8](hour)
+    - [9](hour)
+    - [10](hour)
+    - [11](hour)
+    - [12](hour)
+    - [13](hour)
+    - [14](hour)
+    - [15](hour)
+    - [16](hour)
+    - [17](hour)
+    - [18](hour)
+    - [19](hour)
+    - [20](hour)
+    - [21](hour)
+    - [22](hour)
+    - [23](hour)
+    - [24](hour)

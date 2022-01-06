@@ -1,0 +1,30 @@
+version: "2.0"
+
+rules:
+
+- rule: Say goodbye anytime the user says goodbye
+  steps:
+  - intent: goodbye
+  - action: utter_goodbye
+
+- rule: Confirm order when user want it
+  steps:
+  - intent: order_confirm
+  - action: action_confirm_order
+
+- rule: Activate form
+  steps:
+  - intent: order
+  - action: order_form
+  - active_loop: order_form
+
+- rule: Submit form
+  condition:
+  - active_loop: order_form
+  steps:
+  - action: order_form
+  - active_loop: null
+  - slot_was_set:
+    - requested_slot: null
+  - action: action_finish_meal
+  - action: action_reset_meal_slot
